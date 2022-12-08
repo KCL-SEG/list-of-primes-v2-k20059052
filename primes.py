@@ -7,18 +7,18 @@ def primes(number_of_primes):
     if number_of_primes <= 0:
         raise ValueError
 
-    count = 2
+    counter = 2
     while number_of_primes != 0:
         prime = True
 
-        for i in range(2, count):
-            if count % i == 0:
+        for i in range(2, counter):
+            if counter % i == 0:
                 prime = False
 
         if prime:
-            list.append(count)
+            list.append(counter)
             number_of_primes -= 1
 
-        count += 1
+        counter += 1
 
     return list
